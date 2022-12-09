@@ -1,5 +1,17 @@
 function hasTargetSum(array, target) {
   // Write your algorithm here
+
+  
+  for (let i = 0;i <array.length; i++) {
+    const complementaryNumber = target - array[i];
+    for (let j = i + 1; j < array.length;j++) {
+      if(array[j] === complementaryNumber){
+        return true;
+      }
+    }
+
+  }
+  return false;
 }
 
 /* 
@@ -8,6 +20,10 @@ function hasTargetSum(array, target) {
 
 /* 
   Add your pseudocode here
+  
+  // iterate over the array of numbers, for the current number, ind the complementary number that, when added together it equals to our target sumnumber example: if our number is three and our target sum is 10 then complementary number is 7
+  // iterate over the array to check for complementary nunber , if present return true
+  // if we reach the end of the array and there is no complementary  number , return false
 */
 
 /*
